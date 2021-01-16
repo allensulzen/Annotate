@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Annotate</title>
+        <script src="js/codemirror.min.js"></script>
+        <script src="js/javascript.min.js"></script>
+        <script src="js/css.min.js"></script>
+        <script src="js/xml.min.js"></script>
+        <script src="js/htmlmixed.min.js"></script>
+        <script src="js/html-hint.min.js"></script>
+        <script src="js/xml-hint.min.js"></script>
+        <script src="js/javascript-hint.min.js"></script>
+        <script src="js/xml-fold.min.js"></script>
+        <script src="js/closetag.min.js"></script>
+        <script src="js/closebrackets.min.js"></script>
+        <link rel="stylesheet" href="css/codemirror.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/elegant.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/darcula.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/panda-syntax.min.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link href="uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id='main-window'>
+            <header style="-webkit-app-region: drag">
+                <h2>Annotate</h2>
+                <div class='tools'>                    
+                    <span onclick='saveNote();' style="-webkit-app-region: no-drag" class='save'>
+                        <i class="fi-rr-disk"></i>
+                    </span>
+                    <span onclick='saveNote();' style="-webkit-app-region: no-drag" class='settings'>
+                        <i class="fi-rr-settings-sliders"></i>
+                    </span>
+                    <span onclick='saveNote();' style="-webkit-app-region: no-drag" class='info'>
+                        <i class="fi-rr-info"></i>
+                    </span>
+                </div>
+                <div class='utilities'>
+                    <span onclick='appMinimize();' style="-webkit-app-region: no-drag" class='minimize'>
+                        <i class="fi-rr-minus"></i>
+                    </span>
+                    <span onclick='appMaxToggle();' style="-webkit-app-region: no-drag" class='expand'>
+                        <i class="fi-rr-expand"></i>
+                    </span>
+                    <span onclick='appExit();' style="-webkit-app-region: no-drag" class='exit'>
+                        <i class="fi-rr-cross"></i>
+                    </span>
+                </div>
+            </header>
+            <div class='left-pane'>
+                <h2>Editor <span onclick='newFile();' class='new-file'><i class="fi-rr-file-add"></i></span></h2>
+                <input type='text' id='working-title' placeholder='Title' />
+                <textarea id='working-note' placeholder='Write notes...'></textarea>
+            </div><!-- 
+            placed for spacing purposes
+            --><div class='right-pane'>
+                <h2>Saved Notes</h2>
+                <input type="text" id="note-search" placeholder="Search..." tabindex=1 />
+                <div id='saved-notes'>
+                    
+                </div>
+            </div>
+            <script src="scripts.js"></script>
+        </div>
+    </body>
+</html>

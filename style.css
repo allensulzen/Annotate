@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+}
+::selection {
+    background-color: rgba(46, 152, 251, 0.4);
+}
+html {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+h2 {
+    color: black;
+    margin-bottom: 5px;
+}
+p {
+    color: #656565;
+}
+.left-pane {
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 47px);
+    max-width: 66.6666666666%;
+    vertical-align: top;
+    margin-top: 47px;
+    padding: 0 6px 10px 20px;
+}
+.right-pane {
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 47px);
+    max-width: 33.3333333333%;
+    vertical-align: top;
+    margin-top: 47px;
+    padding: 0 20px 10px 6px;
+}
+#saved-notes {
+    display: block;
+    width: 100%;
+    height: calc(100% - 126px);
+    border: 1px solid #656565;
+    margin-top: 12px;
+    overflow-y: scroll;
+    background-color: white;
+}
+#main-window {
+    background-color: rgba(245, 245, 245, 1);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+header {
+    border-bottom: 1px solid #656565;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 47px;
+    background-color: rgba(0, 0, 0, .08);
+}
+header h2 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0%;
+    line-height: 47px;
+    position: absolute;
+    left: 15px;
+    font-weight: 900;
+    margin: 0;
+}
+.utilities {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    padding-right: 12px;
+    height: 43px;
+    margin: 0;
+}
+.utilities span {
+    cursor: pointer;
+    line-height: 47px;
+    margin-left: 12px;
+    margin-top: 2px;
+    transition: 150ms;
+}
+span.minimize {
+    font-size: 20px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+span.minimize i {
+    position: relative;
+    top: 11px;
+}
+span.expand {
+    font-size: 20px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+span.exit {
+    font-size: 20px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+.utilities span:hover {
+    color: #0066FF;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+/* TOOLS */
+.tools {
+    position: absolute;
+    left: 145px;
+    top: 4px;
+    height: 43px;
+    margin: 0;
+}
+.tools span {
+    cursor: pointer;
+    line-height: 47px;
+    margin-left: 6px;
+    margin-top: 2px;
+    transition: 150ms;
+}
+span.save {
+    font-size: 24px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+span.settings {
+    font-size: 24px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+span.info {
+    font-size: 24px;
+    color: black;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+.tools span:hover {
+    color: #0066FF;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+/* TOOLS END */
+.left-pane input[type="text"] {
+    width: 100%;
+    border: 1px solid #656565;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 42px;
+    transition: 150ms;
+}
+.left-pane input[type="text"]:focus {
+    background-color: rgba(248, 248, 248, 1);
+    outline: none;
+    transition: 150ms;
+}
+.right-pane input[type="text"] {
+    width: 100%;
+    border: 1px solid #656565;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 42px;
+    transition: 150ms;
+}
+.right-pane input[type="text"]:focus {
+    background-color: rgba(248, 248, 248, 1);
+    outline: none;
+    transition: 150ms;
+}
+.right-pane input[type="text"]::placeholder {
+    font-style: italic;
+}
+.CodeMirror.cm-s-elegant.CodeMirror-wrap {
+    border: 1px solid #656565;
+    margin-top: 12px;
+    height: calc(100% - 126px);
+}
+/* NEW FILE BUTTON */
+span.new-file {
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+}
+span.new-file i {
+    color: black;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+span.new-file:hover i {
+    color: #0066FF;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+/* DELETE NOTE BUTTON */
+span.delete-note {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 5px;
+}
+span.delete-note i {
+    display: none;
+    color: black;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+.note-card:hover span.delete-note i {
+    display: block;
+}
+span.delete-note:hover i {
+    color: #ff0000;
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+/* NOTE CARDS */
+.note-card {
+    position: relative;
+    background-color: rgba(0, 0, 0, .05);
+    margin: 10px 10px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    cursor: pointer;
+    top: 0;
+    transition: 50ms;
+    -webkit-transition: 50ms;
+    -moz-transition: 50ms;
+    -ms-transition: 50ms;
+    -o-transition: 50ms;
+}
+.note-card:hover {
+    background-color: rgba(0, 0, 0, .08);
+    border: 1px solid rgba(0, 0, 0, .7);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .7);
+    top: -1px;
+    transition: 50ms;
+    -webkit-transition: 50ms;
+    -moz-transition: 50ms;
+    -ms-transition: 50ms;
+    -o-transition: 50ms;
+}
+.note-card:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, .08);
+    border: 1px solid rgba(0, 0, 0, .7);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .7);
+    top: -1px;
+    transition: 50ms;
+    -webkit-transition: 50ms;
+    -moz-transition: 50ms;
+    -ms-transition: 50ms;
+    -o-transition: 50ms;
+}
+.note-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.note-card p {
+    text-overflow: ellipsis;
+    margin: 8px 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1;
+    height: 18px;
+}

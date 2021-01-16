@@ -1,0 +1,17 @@
+{
+  "name": "annotate",
+  "version": "1.0.0",
+  "description": "Take notes, dude.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node console.log('testing')",
+    "electron": "electron ."
+  },
+  "author": "Allen Sulzen",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.1.1",
+    "electron-titlebar": "0.0.3",
+    "nodemon": "^2.0.7"
+  }
+}
